@@ -39,7 +39,9 @@ while(repetir) {
 
 alert (`el total de la compra es ${acumulador} y el envio ${acumulador * 0.15}`)
 
-*/
+
+
+
 const precioBaseCorreo = 200
 const precioHasta5 = 300
 const precioHasta15 = 700
@@ -47,7 +49,6 @@ const precioHasta30 = 1200
 const IVA = 1.21
 const envioNacional = 1.25
 const envioInternacional = 1.50
-
 
 function envioCorreo (NombreDeUsuario){
 
@@ -84,4 +85,27 @@ function envioCorreo (NombreDeUsuario){
 }
 let NombreDeUsuario = prompt ("dinos tu nombre")
 envioCorreo (NombreDeUsuario)
+
+
+*/
+
+function Paquete(remitente, destinatario, peso, altura,){
+    this.remitente = remitente;
+    this.destinatario = destinatario;
+    this.peso = peso;
+    this.altura = altura;
+    this.corroborar = () => console.log(`hola ${this.remitente} estos datos son los correctos? destinatario ${this.destinatario} peso del paquete ${this.peso} altura ${this.altura} ?`)
+}
+
+const paquete1 = new Paquete ("franco herrera", "mateo fernandez", "12", "150 centimetros")
+const paquete2 = new Paquete ("alma gutierrez", "naara contreras", "4", "50 centimetros")
+
+
+paquete1.corroborar() 
+paquete2.corroborar() 
+
+
+
+
+
 
